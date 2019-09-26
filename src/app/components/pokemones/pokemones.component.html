@@ -1,0 +1,25 @@
+
+  <h1>Pokedex <small>Pokemon</small></h1>
+  <hr>
+
+   <div class="card-columns">
+    <div  class="card animated fadeIn fast"  *ngFor="let pok of poke_list; let i = index" >
+      <div class="tarjeta">
+      <img src="{{pok.sprites.front_default}}" class="card-img-top  imgRedonda " alt="{{pok.name}}">
+    </div>
+      <div class="tarjeta2">
+      <div class="card-body">
+
+        <h5 class="card-title">{{pok.name}}</h5>
+        <hr>
+        <p class="card-text">{{pok.id}}</p>
+        <p class="card-text"><small class="text-muted">Fecha de aparicion: {{pok.name}}</small></p>
+
+
+        <a [routerLink]="['/pokemon',i]" class="btn btn-outline-success btn-block">Ver mas link...</a>
+      </div>
+    </div>
+    </div>
+   </div>
+
+
